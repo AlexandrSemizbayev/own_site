@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Project structure</title>
+    <style>
+      .visible {
+        display: block;
+      }
+      .invisible {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class=folder><span></span>
+  <div class=file>
+  /*onclick="toogleView()"*/
+    <span class="file-name file-el1">
+      index.html
+    </span>
+    <pre>
+      <code id="el1" class="invisible" style="white-space: pre-wrap;">
+        &lt!doctype html&gt
+&lthtml lang="en"&gt
+  &lthead&gt
+    &ltmeta charset="UTF-8" /&gt
+    &ltlink rel="icon" type="image/svg+xml" href="/vite.svg" /&gt
+    &ltmeta name="viewport" content="width=device-width, initial-scale=1.0" /&gt
+    &lttitle&gtVite App&lt/title&gt
+  &lt/head&gt
+  &ltbody&gt
+    &ltdiv id="app"&gt
+      &ltdiv class="terminal"&gt
+        &ltdiv class="close-btn"&gtX&lt/div&gt
+        &ltdiv class="output"&gt
+          &ltp&gtEnter "/help"&lt/p&gt
+        &lt/div&gt
+        &ltdiv class="input-area"&gt
+          &ltlabel for="terminal-input" id="terminal-input-label"&gt
+            &gt
+          &lt/label&gt
+          &ltinput type="text" id="terminal-input" class="terminal-input" autofocus&gt
+          
+        &lt/div&gt
+      &lt/div&gt
+    &lt/div&gt
+    &ltscript type="module" src="/main.js"&gt&lt/script&gt
+  &lt/body&gt
+&lt/html&gt
+
+      </code>
+    </pre>
+  </div>
+  <script>
+  (function() {
+      const codeSection = document.querySelector('#el1');
+      let isVisible = false;
+      function toogleView(e) {
+        isVisible = !isVisible;
+        if(isVisible) {
+          codeSection.classList.add('visible');
+          codeSection.classList.remove('invisible');
+        } else {
+          codeSection.classList.add('invisible');
+          codeSection.classList.remove('visible');
+        }
+        // codeSection.classList.add('visible') : codeSection.classList.
+        console.log(e);
+      }
+      const elementToListen = document.querySelector('.file-el1');
+      // console.log(elementToListen);
+      elementToListen.addEventListener('click', toogleView);
+  })();
+  </script>
+
+  <div class=file>
+  /*onclick="toogleView()"*/
+    <span class="file-name file-el2">
+      javascript.svg
+    </span>
+    <pre>
+      <code id="el2" class="invisible" style="white-space: pre-wrap;">
+        &ltsvg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"&gt&ltpath fill="#F7DF1E" d="M0 0h256v256H0V0Z"&gt&lt/path&gt&ltpath d="m67.312 213.932l19.59-11.856c3.78 6.701 7.218 12.371 15.465 12.371c7.905 0 12.89-3.092 12.89-15.12v-81.798h24.057v82.138c0 24.917-14.606 36.259-35.916 36.259c-19.245 0-30.416-9.967-36.087-21.996m85.07-2.576l19.588-11.341c5.157 8.421 11.859 14.607 23.715 14.607c9.969 0 16.325-4.984 16.325-11.858c0-8.248-6.53-11.17-17.528-15.98l-6.013-2.58c-17.357-7.387-28.87-16.667-28.87-36.257c0-18.044 13.747-31.792 35.228-31.792c15.294 0 26.292 5.328 34.196 19.247l-18.732 12.03c-4.125-7.389-8.591-10.31-15.465-10.31c-7.046 0-11.514 4.468-11.514 10.31c0 7.217 4.468 10.14 14.778 14.608l6.014 2.577c20.45 8.765 31.963 17.7 31.963 37.804c0 21.654-17.012 33.51-39.867 33.51c-22.339 0-36.774-10.654-43.819-24.574"&gt&lt/path&gt&lt/svg&gt
+      </code>
+    </pre>
+  </div>
+  <script>
+  (function() {
+      const codeSection = document.querySelector('#el2');
+      let isVisible = false;
+      function toogleView(e) {
+        isVisible = !isVisible;
+        if(isVisible) {
+          codeSection.classList.add('visible');
+          codeSection.classList.remove('invisible');
+        } else {
+          codeSection.classList.add('invisible');
+          codeSection.classList.remove('visible');
+        }
+        // codeSection.classList.add('visible') : codeSection.classList.
+        console.log(e);
+      }
+      const elementToListen = document.querySelector('.file-el2');
+      // console.log(elementToListen);
+      elementToListen.addEventListener('click', toogleView);
+  })();
+  </script>
+<div class=folder><span>localRepository</span><div class=folder><span>components</span>
+  <div class=file>
+  /*onclick="toogleView()"*/
+    <span class="file-name file-el3">
+      File.js
+    </span>
+    <pre>
+      <code id="el3" class="invisible" style="white-space: pre-wrap;">
+        const template = `
+  &ltdiv class=file&gt
+  /*onclick="toogleView()"*/
+    &ltspan class="file-name file-&lbrace;&lbrace; id &rbrace;&rbrace;"&gt
+      &lbrace;&lbrace; title &rbrace;&rbrace;
+    &lt/span&gt
+    &ltpre&gt
+      &ltcode id="&lbrace;&lbrace; id &rbrace;&rbrace;" class="invisible" style="white-space: pre-wrap;"&gt
+        &lbrace;&lbrace; content &rbrace;&rbrace;
+      &lt/code&gt
+    &lt/pre&gt
+  &lt/div&gt
+  &ltscript&gt
+  (function() &lbrace;
+      const codeSection = document.querySelector('#&lbrace;&lbrace; id&rbrace;&rbrace;');
+      let isVisible = false;
+      function toogleView(e) &lbrace;
+        isVisible = !isVisible;
+        if(isVisible) &lbrace;
+          codeSection.classList.add('visible');
+          codeSection.classList.remove('invisible');
+        &rbrace; else &lbrace;
+          codeSection.classList.add('invisible');
+          codeSection.classList.remove('visible');
+        &rbrace;
+        // codeSection.classList.add('visible') : codeSection.classList.
+        console.log(e);
+      &rbrace;
+      const elementToListen = document.querySelector('.file-&lbrace;&lbrace; id &rbrace;&rbrace;');
+      // console.log(elementToListen);
+      elementToListen.addEventListener('click', toogleView);
+  &rbrace;)();
+  &lt/script&gt
+`;
+
+// const methods = &lbrace;
+//   toogleView(e) &lbrace;
+//     console.log(this);
+//     console.log(e,e.target);
+//   &rbrace;
+// &rbrace;;
+// let script = '&ltscript&gt';
+
+// Object.keys(methods).forEach((key) =&gt &lbrace;
+//   console.log(key);
+//   script += `function {{ content }}lbrace;methods[key]&rbrace;`;
+// &rbrace;)
+
+// script+='&lt/script&gt'
+// template += script;
+
+// const fileParameters = &lbrace;
+//   toogleView: (e) =&gt &lbrace;
+//     console.log(this);
+//     console.log(e,e.target);
+//   &rbrace;
+// &rbrace;;
+
+const data = &lbrace;
+  id: 'el-1',
+  title: '',
+  content: '',
+  template,
+  // ...fileParameters,
+&rbrace;;
+
+export default data;
+      </code>
+    </pre>
+  </div>
+  <script>
+  (function() {
+      const codeSection = document.querySelector('#el3');
+      let isVisible = false;
+      function toogleView(e) {
+        isVisible = !isVisible;
+        if(isVisible) {
+          codeSection.classList.add('visible');
+          codeSection.classList.remove('invisible');
+        } else {
+          codeSection.classList.add('invisible');
+          codeSection.classList.remove('visible');
+        }
+        // codeSection.classList.add('visible') : codeSection.classList.
+        console.log(e);
+      }
+      const elementToListen = document.querySelector('.file-el3');
+      // console.log(elementToListen);
+      elementToListen.addEventListener('click', toogleView);
+  })();
+  </script>
+</div>
+  <div class=file>
+  /*onclick="toogleView()"*/
+    <span class="file-name file-el4">
+      generate.js
+    </span>
+    <pre>
+      <code id="el4" class="invisible" style="white-space: pre-wrap;">
+        import fs from 'fs';
+import &lbrace; replaceHTMLSymbols &rbrace; from './helpers/replaceSymbols.js';
+import &lbrace; parseTemplate &rbrace; from './templateParser.js';
+import File from './components/File.js';
+const createTemplate = (children) =&gt `&lt!DOCTYPE html&gt
+&lthtml lang="en"&gt
+  &lthead&gt
+    &ltmeta charset="UTF-8"&gt
+    &lttitle&gtProject structure&lt/title&gt
+    &ltstyle&gt
+      .visible &lbrace;
+        display: block;
+      &rbrace;
+      .invisible &lbrace;
+        display: none;
+      &rbrace;
+    &lt/style&gt
+  &lt/head&gt
+  &ltbody&gt
+    {{ content }}lbrace;children&rbrace;
+  &lt/body&gt
+&lt/html&gt`
+const mode = `to{{ content }}lbrace;process.env.MODE || 'HTML'&rbrace;`;
+
+function createFileView(file) &lbrace;
+  // console.log(title);
+  const actions = &lbrace;
+    'toHTML': () =&gt &lbrace;
+      const content = replaceHTMLSymbols(file.content);
+      return parseTemplate(
+        &lbrace;
+          ...File,
+          title: file.title,
+          content,
+        &rbrace;,
+      );
+      // console.log(file);
+      // return `
+      //   &ltdiv class=file&gt
+      //     &ltspan class="file-name"&gt
+      //       {{ content }}lbrace;file.title&rbrace;
+      //     &lt/span&gt
+      //     &ltpre&gt
+      //       &ltcode id="'+file.title+'"&gt
+      //         {{ content }}lbrace;replace(
+      //           replace(
+      //             replace(
+      //               file.content,
+      //               /[&amp]/gm,
+      //               '&ampamp',
+      //             ),
+      //             /[&lt]/gm,
+      //             '&amplt'
+      //           ),
+      //           /[&gt]/gm,
+      //           '&ampgt'
+      //         )&rbrace;
+      //       &lt/code&gt
+      //     &lt/pre&gt
+      //   &lt/div&gt
+      // `
+      return '&ltdiv class=file&gt'+
+      '&ltspan class="file-name"&gt'+
+      file.title+
+      '&lt/span&gt'+
+      '&ltpre&gt'+
+      '&ltcode id="'+file.title+'"&gt'+
+      replace(
+        replace(
+          replace(
+            file.content,
+            /[&amp]/gm,
+            '&ampamp',
+          ),
+          /[&lt]/gm,
+          '&amplt'
+        ),
+        /[&gt]/gm,
+        '&ampgt'
+      )+
+      '&lt/code&gt&lt/pre&gt&lt/div&gt'
+    &rbrace;,
+  &rbrace;;
+  return mode in actions ? actions[mode]() : '';
+&rbrace;
+
+function createFolderView(folder) &lbrace;
+  const files = folder.files.map((file) =&gt &lbrace;
+
+    if(file.type === 'file') return createFileView(file) //replace(createFileView(file),/"\n "/gm, '&ltbr/&gt');
+    if(file.type === 'folder') return createFolderView(file);
+  &rbrace;).join('');
+  const actions = &lbrace;
+    toHTML: () =&gt `&ltdiv class=folder&gt&ltspan&gt{{ content }}lbrace;folder.title&rbrace;&lt/span&gt{{ content }}lbrace;files&rbrace;&lt/div&gt`
+  &rbrace;;
+  return mode in actions ? actions[mode]() : '';
+&rbrace;
+
+// function replace(str, regex, to) &lbrace;
+//   return str.replace(regex, to);
+// &rbrace;
+
+export default async function generate(structure) &lbrace;
+  const generated = createTemplate(createFolderView(structure));
+  fs.writeFile('./structure.html', generated,(err) =&gt &lbrace;console.error(err)&rbrace;);
+&rbrace;
+
+      </code>
+    </pre>
+  </div>
+  <script>
+  (function() {
+      const codeSection = document.querySelector('#el4');
+      let isVisible = false;
+      function toogleView(e) {
+        isVisible = !isVisible;
+        if(isVisible) {
+          codeSection.classList.add('visible');
+          codeSection.classList.remove('invisible');
+        } else {
+          codeSection.classList.add('invisible');
+          codeSection.classList.remove('visible');
+        }
+        // codeSection.classList.add('visible') : codeSection.classList.
+        console.log(e);
+      }
+      const elementToListen = document.querySelector('.file-el4');
+      // console.log(elementToListen);
+      elementToListen.addEventListener('click', toogleView);
+  })();
+  </script>
+
+  <div class=file>
+  /*onclick="toogleView()"*/
+    <span class="file-name file-el5">
+      generateJSON.js
+    </span>
+    <pre>
+      <code id="el5" class="invisible" style="white-space: pre-wrap;">
+        import fs from 'fs';
+import &lbrace;dirname&rbrace; from 'path';
+import generate from './generate.js';
+// import &lbrace;JSDOM&rbrace; from 'jsdom';
+
+// const &lbrace; window &rbrace; = new JSDOM();
+// const &lbrace; document &rbrace; = window;
+
+// const mode = `to{{ content }}lbrace;process.env.MODE || 'HTML'&rbrace;`;
+
+async function init() &lbrace;
+
+  // class ViewGenerator&lbrace;
+  //   constructor() &lbrace;
+  //     // this.root = 
+  //   &rbrace;
+  // &rbrace;
+  
+  // class FileView &lbrace;
+  //   constructor(title, content) &lbrace;
+  //     this.title = title;
+  //     this.content = content;
+      
+  //   &rbrace;
+  
+  //   toHTML() &lbrace;
+  //     console.log(this.title);
+  //     return `
+  //       &ltdiv class="file"&gt
+  //         &ltspan class="file-name"&gt
+  //           {{ content }}lbrace;this.title&rbrace;
+  //         &lt/span&gt
+  //         &ltspan id="{{ content }}lbrace;this.title&rbrace;"&gt
+  //           &ltcode&gt
+  //           {{ content }}lbrace;this.content&rbrace;
+  //           &lt/code&gt
+  //         &lt/span&gt
+  //       &lt/div&gt
+  //     `
+  //   &rbrace;
+  // &rbrace;
+
+  // function createFileView(title = '', content = '') &lbrace;
+  //   console.log(title);
+  //   const actions = &lbrace;
+  //     'toHTML': () =&gt &lbrace;
+  //       const wrapper = document.createElement('div');
+  //       wrapper.classList.add('file');
+  //       const title = document.createElement('span');
+  //       // title.classList.add(title);
+  //       wrapper.appendChild(title);
+  //       const children = document.createElement('div');
+  //       children.innerText = content;
+  //       wrapper.appendChild(children);
+  //       return wrapper.innerHTML;
+  //     //   return `
+  //     //   &ltdiv class="file"&gt
+  //     //     &ltspan class="file-name"&gt
+  //     //       {{ content }}lbrace;title&rbrace;
+  //     //     &lt/span&gt
+          
+  //     //       &ltcode id="{{ content }}lbrace;title&rbrace;"&gt
+  //     //       {{ content }}lbrace;content&rbrace;
+  //     //       &lt/code&gt
+          
+  //     //   &lt/div&gt
+  //     // `
+  //     &rbrace;,
+  //   &rbrace;;
+  //   return mode in actions ? actions[mode]() : '';
+  // &rbrace;
+
+  // function createFolderView(path = '', title = '') &lbrace;
+  //   const files = ls(`{{ content }}lbrace;path&rbrace;{{ content }}lbrace;title&rbrace;/`);
+  //   const actions = &lbrace;
+  //     // .map((file) =&gt new FileView(file)[mode]())
+  //     'toHTML': () =&gt `
+  //       &ltdiv class="folder"&gt
+  //         &ltspan&gt {{ content }}lbrace;title&rbrace; &lt/span&gt
+  //         {{ content }}lbrace;files&rbrace;
+  //       &lt/div&gt
+  //     `
+  //   &rbrace;;
+  //   return mode in actions ? actions[mode]() : '';
+  // &rbrace;
+  
+  // class FolderView &lbrace;
+  //   constructor(path, title) &lbrace;
+  //     this.title = title;
+  //     this.files = ls(`{{ content }}lbrace;path&rbrace;{{ content }}lbrace;title&rbrace;/`);
+  //   &rbrace;
+  
+  //   toHTML() &lbrace;
+  //     const files = [...this.files].join('')
+  //     // .join('');
+  //     return `
+  //       &ltdiv class="folder"&gt
+  //       // .map((file) =&gt new FileView(file)[mode]())
+  //         {{ content }}lbrace;files&rbrace;
+  //       &lt/div&gt
+  //     `
+  //   &rbrace;
+  // &rbrace;
+
+
+  const startPath = '../';
+  const excludeFiles = &lbrace;
+    'package-lock.json': true,
+    '.gitignore': true,
+    'node_modules': true,
+    'structure.html': true,
+    'structure.json': true,
+  &rbrace;
+
+  const skipThisExtensions = ['jpg','jpeg','png','bmp','mp3','mp4','mpeg'];
+  const extensionsToSkip = &lbrace;&rbrace;;
+
+  skipThisExtensions.forEach((extension) =&gt &lbrace;
+    extensionsToSkip[`.{{ content }}lbrace;extension&rbrace;`] = true;
+  &rbrace;)
+
+  const generateExcluded = (fileName, path = '') =&gt (&lbrace;
+    type: 'excluded',
+    title: fileName,
+    path,
+  &rbrace;)
+
+  const generateFile = (fileName, content) =&gt 
+    // createFileView(fileName,content);
+    // new FileView(fileName, content)[mode]();
+    &lbrace;
+    return &lbrace;
+    type: 'file',
+    title: fileName,
+    content: content,
+    &rbrace;;
+  &rbrace;;
+
+  const generateFolder = (path = './', folderName = '') =&gt &lbrace;
+    // return createFolderView(path,folderName);
+    // return new FolderView(path, folderName)[mode]();
+    const files = ls(`{{ content }}lbrace;path&rbrace;{{ content }}lbrace;folderName&rbrace;/`);
+    return &lbrace;
+      type: 'folder',
+      title: folderName,
+      files,
+    &rbrace;;
+  &rbrace;;
+
+
+  function defineType(fileName, path) &lbrace;
+    if(fileName.match(/[\w|\-|_]+\.\w+/gm)) &lbrace;
+      return open(fileName, path);
+    &rbrace; else &lbrace;
+      return generateFolder(path, fileName);
+    &rbrace;
+  &rbrace;
+
+  function open(fileName, path) &lbrace;
+    const fileContent = fs.readFileSync(path+fileName, &lbrace; encoding: 'utf-8', flag: 'r'&rbrace;);
+    return generateFile(fileName, fileContent);
+  &rbrace;
+
+  function ls(path = '.') &lbrace;
+    const files = fs.readdirSync(path,&lbrace; withFileTypes: true &rbrace;);
+    const result = files.map((file) =&gt &lbrace;
+      if(!excludeFiles[file.name]) &lbrace;
+        const extension = file.name.match(/\.\w+/gm);
+        if(extension &amp&amp extensionsToSkip[extension[0]]) &lbrace;
+          return generateExcluded(file.name, path+file.name);
+        &rbrace;
+        const result = defineType(file.name, path);
+        return result;
+      &rbrace; else &lbrace;
+        return generateExcluded(file.name);
+      &rbrace;
+    &rbrace;);
+    return result;
+  &rbrace;
+  const root = generateFolder(dirname(startPath));
+  // console.log(root);
+  generate(root);
+  fs.writeFile('./structure.json', JSON.stringify(await Promise.resolve(root)),(err) =&gt &lbrace;console.error(err)&rbrace;);
+&rbrace;
+
+init();
+      </code>
+    </pre>
+  </div>
+  <script>
+  (function() {
+      const codeSection = document.querySelector('#el5');
+      let isVisible = false;
+      function toogleView(e) {
+        isVisible = !isVisible;
+        if(isVisible) {
+          codeSection.classList.add('visible');
+          codeSection.classList.remove('invisible');
+        } else {
+          codeSection.classList.add('invisible');
+          codeSection.classList.remove('visible');
+        }
+        // codeSection.classList.add('visible') : codeSection.classList.
+        console.log(e);
+      }
+      const elementToListen = document.querySelector('.file-el5');
+      // console.log(elementToListen);
+      elementToListen.addEventListener('click', toogleView);
+  })();
+  </script>
+<div class=folder><span>helpers</span>
+  <div class=file>
+  /*onclick="toogleView()"*/
+    <span class="file-name file-el6">
+      replaceSymbols.js
+    </span>
+    <pre>
+      <code id="el6" class="invisible" style="white-space: pre-wrap;">
+        export function replace(str, regex, to) &lbrace;
+  return str.replace(regex, to);
+&rbrace;
+
+export function replaceHTMLSymbols(rawHTML) &lbrace; // replacing all special HTML symbols to avoid their dissapearance in resulted examples
+  return replace(
+    replace(
+      replace( // &gt -&gt &ampgt
+        replace( // &lt -&gt &amplt
+          replace(  // &amp -&gt &ampamp
+            rawHTML,
+            /[&amp]/gm,
+            '&ampamp',
+          ),
+          /[&lt]/gm,
+          '&amplt'
+        ),
+        /[&gt]/gm,
+        '&ampgt'
+      ),
+      /[&lbrace;]/gm,
+      '&amplbrace;'
+    ),
+    /[&rbrace;]/gm,
+    '&amprbrace;',
+  );
+  // return value for HTML changed from &ltspan&gtText&lt/span&gt to &ampltspan&ampgtText&ampltspan&ampgt
+  // return value for JS changed from if(a &gt= x &amp&amp x &lt= 10) to if(a &ampgt= x &ampamp&ampamp x &amplt= 10)
+&rbrace;
+      </code>
+    </pre>
+  </div>
+  <script>
+  (function() {
+      const codeSection = document.querySelector('#el6');
+      let isVisible = false;
+      function toogleView(e) {
+        isVisible = !isVisible;
+        if(isVisible) {
+          codeSection.classList.add('visible');
+          codeSection.classList.remove('invisible');
+        } else {
+          codeSection.classList.add('invisible');
+          codeSection.classList.remove('visible');
+        }
+        // codeSection.classList.add('visible') : codeSection.classList.
+        console.log(e);
+      }
+      const elementToListen = document.querySelector('.file-el6');
+      // console.log(elementToListen);
+      elementToListen.addEventListener('click', toogleView);
+  })();
+  </script>
+</div>
+  <div class=file>
+  /*onclick="toogleView()"*/
+    <span class="file-name file-el7">
+      templateParser.js
+    </span>
+    <pre>
+      <code id="el7" class="invisible" style="white-space: pre-wrap;">
+        /*  This file helps us to parse template files
+input:
+----------------
+&ltdiv class=file&gt
+  &ltspan class="file-name" onclick="(e) => toogleView"&gt
+    &lbrace;&lbrace; title &rbrace;&rbrace;
+  &lt/span&gt
+  &ltpre&gt
+    &ltcode id="&lbrace;&lbrace; title &rbrace;&rbrace;"&gt
+      &lbrace;&lbrace; content &rbrace;&rbrace;
+    &lt/code&gt
+  &lt/pre&gt
+&lt/div&gt
+----------------
+
+desired output:
+----------------
+&ltdiv class=file&gt
+  &ltspan class="file-name" onclick="toogleView"&gt
+    Alex
+  &lt/span&gt
+  &ltpre&gt
+    &ltcode id="Alex"&gt
+      Some content
+    &lt/code&gt
+  &lt/pre&gt
+&lt/div&gt
+----------------
+*/
+let countAsId = 1;
+
+const nonWhiteSpaceChars = '\\S+';  // double backslash is required for new RegExp(regex), since we are passing a string;
+const additionalAttributes = &lbrace;  // keys have RegExp based naming
+  // [`@click="{{ content }}lbrace;nonWhiteSpaceChars&rbrace;"`]: (callback) =&gt `onclick="{{ content }}lbrace;callback&rbrace;"`,
+  // [`@change="[{{ content }}lbrace;nonWhiteSpaceChars&rbrace;]"`]: (callback) =&gt `onchange="{{ content }}lbrace;callback&rbrace;"`,
+  [`@click="{{ content }}lbrace;nonWhiteSpaceChars&rbrace;"`]: (callback) =&gt `onclick="(e) =&gt {{ content }}lbrace;callback&rbrace;"`,
+  [`@change="[{{ content }}lbrace;nonWhiteSpaceChars&rbrace;]"`]: (callback) =&gt `onchange="{{ content }}lbrace;callback&rbrace;"`,
+&rbrace;
+
+const strictMode = !!process.env.IS_STRICT;
+
+const throwException = (reason, template) =&gt &lbrace;
+  const message = `{{ content }}lbrace;reason&rbrace; was not passed in {{ content }}lbrace;template&rbrace;, {{ content }}lbrace;process.cwd()&rbrace;`;
+  if(strictMode) throw Error(message);
+  else console.warn(message);
+&rbrace;
+
+export const parseTemplate = (data) =&gt &lbrace;
+  let &lbrace; template &rbrace; = data;
+  data.id = `el{{ content }}lbrace;countAsId&rbrace;`;
+  countAsId++;
+  delete data[template];
+
+  const valuesToReplace = template.match(/\&lbrace;\&lbrace;\s*([^\s&lbrace;&rbrace;]+)\s*\&rbrace;\&rbrace;/gm);  // matching all values enclosed in &lbrace;&lbrace; * &rbrace;&rbrace;;
+  const filteredDictOfValues = &lbrace;&rbrace;;
+  valuesToReplace.forEach((val) =&gt &lbrace;
+    // const matchedKey = val.match(/[^\s&lbrace;&rbrace;]+/);
+    filteredDictOfValues[val]=true;
+  &rbrace;);
+  const filteredValues = Object.keys(filteredDictOfValues);
+  filteredValues.forEach((scopedValue,idx) =&gt &lbrace;
+    // console.log(scopedValue,idx);
+    // const matchedValues = scopedValue.matchAll(/[^\s&lbrace;&rbrace;]+/);  // matching all non-white-space chars within &lbrace;&lbrace; * &rbrace;&rbrace;;
+    // if(matchedValues) &lbrace; // may result null
+    //   console.log(matchedValues,idx,'matchedValue');
+    //   if(!matchedValue[0] in data) throwException(matchedValue[0], template); // throw exception, if not presented in data;
+    //   template = template.replace(scopedValue, data[matchedValue[0]]);  // replacing &lbrace;&lbrace; * &rbrace;&rbrace; to passed value;
+    //   // console.table(&lbrace;template,matchedValue:matchedValue[0]&rbrace;);
+    // &rbrace;
+    const matchedValue = scopedValue.match(/[^\s&lbrace;&rbrace;]+/);  // matching all non-white-space chars within &lbrace;&lbrace; * &rbrace;&rbrace;;
+    if(matchedValue) &lbrace; // may result null
+      console.log(matchedValue[0],idx,'matchedValue');
+      if(!matchedValue[0] in data) throwException(matchedValue[0], template); // throw exception, if not presented in data;
+      template = template.replaceAll(scopedValue, data[matchedValue[0]]);  // replacing &lbrace;&lbrace; * &rbrace;&rbrace; to passed value;
+      if(matchedValue[0] === 'id') &lbrace;
+        console.log(template);
+      &rbrace;
+      // console.table(&lbrace;template,matchedValue:matchedValue[0]&rbrace;);
+    &rbrace;
+  &rbrace;);
+  if(countAsId === 14) &lbrace;
+    console.log(template);
+  &rbrace;
+  // console.log(filteredValues);
+  Object.keys(additionalAttributes).forEach((attr) =&gt &lbrace; // 
+    const regexp = new RegExp(attr, 'gm');
+    const match = template.match(regexp); // getting whole attribute, like onclick="(e) => toogleView"
+    if(match) &lbrace;
+      match.forEach((matchedAttr) =&gt &lbrace;
+        const val = matchedAttr.match(/"([^"]*)"/gm); // matching everything enclosed in double quotes a-la "toogleView"
+        if(val) &lbrace;
+          const parameter = val[0].replace(/"/gm,''); // replacing ": '"toogleView"' -&gt 'toogleView'
+          if(!parameter in data) throwException(parameter, template);
+          template = template.replace(matchedAttr, additionalAttributes[attr](parameter));
+        &rbrace;
+      &rbrace;);
+    &rbrace;
+  &rbrace;);
+  // if(countAsId === 3) &lbrace;
+  //   console.log(template);
+  // &rbrace;
+  return template;
+&rbrace;
+      </code>
+    </pre>
+  </div>
+  <script>
+  (function() {
+      const codeSection = document.querySelector('#el7');
+      let isVisible = false;
+      function toogleView(e) {
+        isVisible = !isVisible;
+        if(isVisible) {
+          codeSection.classList.add('visible');
+          codeSection.classList.remove('invisible');
+        } else {
+          codeSection.classList.add('invisible');
+          codeSection.classList.remove('visible');
+        }
+        // codeSection.classList.add('visible') : codeSection.classList.
+        console.log(e);
+      }
+      const elementToListen = document.querySelector('.file-el7');
+      // console.log(elementToListen);
+      elementToListen.addEventListener('click', toogleView);
+  })();
+  </script>
+</div>
+  <div class=file>
+  /*onclick="toogleView()"*/
+    <span class="file-name file-el8">
+      main.js
+    </span>
+    <pre>
+      <code id="el8" class="invisible" style="white-space: pre-wrap;">
+        import './style.scss';
+
+const about = `
+  With over three years of experience delivering impactful frontend solutions, I specialize in Vue.js and have a solid background in React.js.
+  My technical skills include a strong command of JavaScript, HTML5, CSS3, and TypeScript, and I am well-versed in creating mobile-first, responsive websites.
+  In my previous role, I thrived in a fast-paced and diverse environment, building user interfaces that boosted user engagement and drove business growth.
+  I'm confident I can make a similar positive impact on your team.
+`
+const output = document.querySelector('.output');
+const inputLine = document.querySelector('#terminal-input');
+const writeLine = (str) =&gt &lbrace;
+  const p = document.createElement('p');
+  let idx = 0;
+  output.appendChild(p);
+  function recursive() &lbrace;
+    window.requestAnimationFrame(() =&gt &lbrace;
+      p.innerText += str[idx];
+      console.log(str[idx] === ' ', str[idx] === '\n');
+      idx++;
+      if(idx &lt str.length) &lbrace;
+        recursive();
+      &rbrace;
+    &rbrace;)
+  &rbrace;
+  recursive();
+&rbrace;
+
+const commands = &lbrace;
+  '/help' : () =&gt &lbrace;
+    Object.keys(commands).forEach((command) =&gt &lbrace;
+      writeLine(command);
+    &rbrace;)
+  &rbrace;,
+  '/about': () =&gt &lbrace;
+    const splitedText = about.split('\n');
+    writeLine(about);
+    // splitedText.forEach((paragraph) =&gt &lbrace;
+    //   writeLine(paragraph);
+    // &rbrace;);
+  &rbrace;,
+  '/show_code': () =&gt &lbrace;
+    console.log('S_C')
+  &rbrace;,
+  '/cv': () =&gt &lbrace;
+    console.log('cv')
+  &rbrace;,
+&rbrace;
+
+inputLine.addEventListener('keypress', (e) =&gt &lbrace;
+  requestAnimationFrame(() =&gt &lbrace;
+    if(e.charCode === 13) &lbrace;
+      const &lbrace;value&rbrace; = e.target;
+      console.log(e);
+      if(value in commands) &lbrace;
+        commands[value]();
+        e.target.value = "";
+      &rbrace; else &lbrace;
+        writeLine(`Command not found: {{ content }}lbrace;value&rbrace;`);
+      &rbrace;
+    &rbrace;
+  &rbrace;)
+&rbrace;);
+
+      </code>
+    </pre>
+  </div>
+  <script>
+  (function() {
+      const codeSection = document.querySelector('#el8');
+      let isVisible = false;
+      function toogleView(e) {
+        isVisible = !isVisible;
+        if(isVisible) {
+          codeSection.classList.add('visible');
+          codeSection.classList.remove('invisible');
+        } else {
+          codeSection.classList.add('invisible');
+          codeSection.classList.remove('visible');
+        }
+        // codeSection.classList.add('visible') : codeSection.classList.
+        console.log(e);
+      }
+      const elementToListen = document.querySelector('.file-el8');
+      // console.log(elementToListen);
+      elementToListen.addEventListener('click', toogleView);
+  })();
+  </script>
+
+  <div class=file>
+  /*onclick="toogleView()"*/
+    <span class="file-name file-el9">
+      package.json
+    </span>
+    <pre>
+      <code id="el9" class="invisible" style="white-space: pre-wrap;">
+        &lbrace;
+  "name": "terminal",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": &lbrace;
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  &rbrace;,
+  "devDependencies": &lbrace;
+    "jsdom": "^24.1.0",
+    "sass": "^1.77.6",
+    "vite": "^5.3.1"
+  &rbrace;,
+  "dependencies": &lbrace;
+    "vue": "^3.4.31"
+  &rbrace;
+&rbrace;
+
+      </code>
+    </pre>
+  </div>
+  <script>
+  (function() {
+      const codeSection = document.querySelector('#el9');
+      let isVisible = false;
+      function toogleView(e) {
+        isVisible = !isVisible;
+        if(isVisible) {
+          codeSection.classList.add('visible');
+          codeSection.classList.remove('invisible');
+        } else {
+          codeSection.classList.add('invisible');
+          codeSection.classList.remove('visible');
+        }
+        // codeSection.classList.add('visible') : codeSection.classList.
+        console.log(e);
+      }
+      const elementToListen = document.querySelector('.file-el9');
+      // console.log(elementToListen);
+      elementToListen.addEventListener('click', toogleView);
+  })();
+  </script>
+<div class=folder><span>public</span>
+  <div class=file>
+  /*onclick="toogleView()"*/
+    <span class="file-name file-el10">
+      vite.svg
+    </span>
+    <pre>
+      <code id="el10" class="invisible" style="white-space: pre-wrap;">
+        &ltsvg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="31.88" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 257"&gt&ltdefs&gt&ltlinearGradient id="IconifyId1813088fe1fbc01fb466" x1="-.828%" x2="57.636%" y1="7.652%" y2="78.411%"&gt&ltstop offset="0%" stop-color="#41D1FF"&gt&lt/stop&gt&ltstop offset="100%" stop-color="#BD34FE"&gt&lt/stop&gt&lt/linearGradient&gt&ltlinearGradient id="IconifyId1813088fe1fbc01fb467" x1="43.376%" x2="50.316%" y1="2.242%" y2="89.03%"&gt&ltstop offset="0%" stop-color="#FFEA83"&gt&lt/stop&gt&ltstop offset="8.333%" stop-color="#FFDD35"&gt&lt/stop&gt&ltstop offset="100%" stop-color="#FFA800"&gt&lt/stop&gt&lt/linearGradient&gt&lt/defs&gt&ltpath fill="url(#IconifyId1813088fe1fbc01fb466)" d="M255.153 37.938L134.897 252.976c-2.483 4.44-8.862 4.466-11.382.048L.875 37.958c-2.746-4.814 1.371-10.646 6.827-9.67l120.385 21.517a6.537 6.537 0 0 0 2.322-.004l117.867-21.483c5.438-.991 9.574 4.796 6.877 9.62Z"&gt&lt/path&gt&ltpath fill="url(#IconifyId1813088fe1fbc01fb467)" d="M185.432.063L96.44 17.501a3.268 3.268 0 0 0-2.634 3.014l-5.474 92.456a3.268 3.268 0 0 0 3.997 3.378l24.777-5.718c2.318-.535 4.413 1.507 3.936 3.838l-7.361 36.047c-.495 2.426 1.782 4.5 4.151 3.78l15.304-4.649c2.372-.72 4.652 1.36 4.15 3.788l-11.698 56.621c-.732 3.542 3.979 5.473 5.943 2.437l1.313-2.028l72.516-144.72c1.215-2.423-.88-5.186-3.54-4.672l-25.505 4.922c-2.396.462-4.435-1.77-3.759-4.114l16.646-57.705c.677-2.35-1.37-4.583-3.769-4.113Z"&gt&lt/path&gt&lt/svg&gt
+      </code>
+    </pre>
+  </div>
+  <script>
+  (function() {
+      const codeSection = document.querySelector('#el10');
+      let isVisible = false;
+      function toogleView(e) {
+        isVisible = !isVisible;
+        if(isVisible) {
+          codeSection.classList.add('visible');
+          codeSection.classList.remove('invisible');
+        } else {
+          codeSection.classList.add('invisible');
+          codeSection.classList.remove('visible');
+        }
+        // codeSection.classList.add('visible') : codeSection.classList.
+        console.log(e);
+      }
+      const elementToListen = document.querySelector('.file-el10');
+      // console.log(elementToListen);
+      elementToListen.addEventListener('click', toogleView);
+  })();
+  </script>
+</div>
+  <div class=file>
+  /*onclick="toogleView()"*/
+    <span class="file-name file-el11">
+      style.css
+    </span>
+    <pre>
+      <code id="el11" class="invisible" style="white-space: pre-wrap;">
+        :root &lbrace;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+&rbrace;
+
+a &lbrace;
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+&rbrace;
+a:hover &lbrace;
+  color: #535bf2;
+&rbrace;
+
+body &lbrace;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+&rbrace;
+
+h1 &lbrace;
+  font-size: 3.2em;
+  line-height: 1.1;
+&rbrace;
+
+#app &lbrace;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+&rbrace;
+
+.logo &lbrace;
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+&rbrace;
+.logo:hover &lbrace;
+  filter: drop-shadow(0 0 2em #646cffaa);
+&rbrace;
+.logo.vanilla:hover &lbrace;
+  filter: drop-shadow(0 0 2em #f7df1eaa);
+&rbrace;
+
+.card &lbrace;
+  padding: 2em;
+&rbrace;
+
+.read-the-docs &lbrace;
+  color: #888;
+&rbrace;
+
+button &lbrace;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+&rbrace;
+button:hover &lbrace;
+  border-color: #646cff;
+&rbrace;
+button:focus,
+button:focus-visible &lbrace;
+  outline: 4px auto -webkit-focus-ring-color;
+&rbrace;
+
+@media (prefers-color-scheme: light) &lbrace;
+  :root &lbrace;
+    color: #213547;
+    background-color: #ffffff;
+  &rbrace;
+  a:hover &lbrace;
+    color: #747bff;
+  &rbrace;
+  button &lbrace;
+    background-color: #f9f9f9;
+  &rbrace;
+&rbrace;
+
+      </code>
+    </pre>
+  </div>
+  <script>
+  (function() {
+      const codeSection = document.querySelector('#el11');
+      let isVisible = false;
+      function toogleView(e) {
+        isVisible = !isVisible;
+        if(isVisible) {
+          codeSection.classList.add('visible');
+          codeSection.classList.remove('invisible');
+        } else {
+          codeSection.classList.add('invisible');
+          codeSection.classList.remove('visible');
+        }
+        // codeSection.classList.add('visible') : codeSection.classList.
+        console.log(e);
+      }
+      const elementToListen = document.querySelector('.file-el11');
+      // console.log(elementToListen);
+      elementToListen.addEventListener('click', toogleView);
+  })();
+  </script>
+
+  <div class=file>
+  /*onclick="toogleView()"*/
+    <span class="file-name file-el12">
+      style.scss
+    </span>
+    <pre>
+      <code id="el12" class="invisible" style="white-space: pre-wrap;">
+        @import url('https://fonts.googleapis.com/css2?family=Jersey+15&ampfamily=Press+Start+2P&ampdisplay=swap');
+$terminal_color: white;
+.terminal &lbrace;
+  * &lbrace;
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+    font-size: 12px;
+  &rbrace;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 300px;
+  width: 400px;
+  background-color: black;
+  border-radius: 5px;
+  color: $terminal_color;
+  
+  .close-btn &lbrace;
+    border: 1px solid $terminal_color;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 2px 5px;
+    border-radius: 2px;
+    opacity: .8;
+    letter-spacing: 0px;
+  &rbrace;
+  .output &lbrace;
+    height: 90%;
+    width: 100%;
+    padding-top: 5px;
+    padding-left: 10px;
+    white-space: pre-wrap;
+  &rbrace;
+  .input-area &lbrace;
+    height: 10%;
+    display: flex;
+    #terminal-input-label &lbrace;
+      width: 5%;
+      height: 100%;
+      text-align: right;
+      align-content: center;
+      font-size: 10px;
+    &rbrace;
+    .terminal-input &lbrace;
+      height: 100%;
+      width: 95%;
+      background-color: black;
+      position: relative;
+      border: none;
+      outline: none;
+      color: $terminal_color;
+    &rbrace;
+  &rbrace;
+&rbrace;
+      </code>
+    </pre>
+  </div>
+  <script>
+  (function() {
+      const codeSection = document.querySelector('#el12');
+      let isVisible = false;
+      function toogleView(e) {
+        isVisible = !isVisible;
+        if(isVisible) {
+          codeSection.classList.add('visible');
+          codeSection.classList.remove('invisible');
+        } else {
+          codeSection.classList.add('invisible');
+          codeSection.classList.remove('visible');
+        }
+        // codeSection.classList.add('visible') : codeSection.classList.
+        console.log(e);
+      }
+      const elementToListen = document.querySelector('.file-el12');
+      // console.log(elementToListen);
+      elementToListen.addEventListener('click', toogleView);
+  })();
+  </script>
+<div class=folder><span>test</span>
+  <div class=file>
+  /*onclick="toogleView()"*/
+    <span class="file-name file-el13">
+      1.json
+    </span>
+    <pre>
+      <code id="el13" class="invisible" style="white-space: pre-wrap;">
+        &lbrace;"type":"folder","title":"","files":[&lbrace;&rbrace;,&lbrace;&rbrace;,&lbrace;&rbrace;,&lbrace;&rbrace;,&lbrace;&rbrace;,&lbrace;&rbrace;,&lbrace;&rbrace;,&lbrace;&rbrace;]&rbrace;
+      </code>
+    </pre>
+  </div>
+  <script>
+  (function() {
+      const codeSection = document.querySelector('#el13');
+      let isVisible = false;
+      function toogleView(e) {
+        isVisible = !isVisible;
+        if(isVisible) {
+          codeSection.classList.add('visible');
+          codeSection.classList.remove('invisible');
+        } else {
+          codeSection.classList.add('invisible');
+          codeSection.classList.remove('visible');
+        }
+        // codeSection.classList.add('visible') : codeSection.classList.
+        console.log(e);
+      }
+      const elementToListen = document.querySelector('.file-el13');
+      // console.log(elementToListen);
+      elementToListen.addEventListener('click', toogleView);
+  })();
+  </script>
+</div></div>
+  </body>
+</html>
